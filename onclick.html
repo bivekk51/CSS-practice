@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu with Tailwind CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="font-sans">
+
+    <nav class="bg-gray-800 text-white">
+        <ul class="flex p-0 m-0">
+            <li class="relative group">
+                <div class="block p-4 hover:bg-gray-700 cursor-pointer" onclick="toggleMenu()">Services</div>
+                <ul id="menu"
+                    class="absolute left-0 hidden group-hover:block bg-gray-700 min-w-[150px] p-0 m-0 list-none">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">Service 1</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">Service 2</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">Service 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="block p-4 hover:bg-gray-700">About</a></li>
+            <li><a href="#" class="block p-4 hover:bg-gray-700">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>
